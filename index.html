@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Interactive card details form</title>
+
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="gradient--container">
+          <div class="gradient--container--front">
+            <p id="card--number--details">9056 6758 5647 107E</p>
+
+            <div id="card--details">
+              <p id="card--name--details">Jane Appleseed</p>
+              <p id="card--expiry--details">
+                <span id="month">00</span>/
+                <span id="year">00</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="gradient--container--back">
+            <p id="card--cvc--details">012</p>
+          </div>
+        </div>
+
+        <form action="#" id="form">
+            <div>
+                <div>
+                    <label for="card--name">
+                        CARDHOLDER NAME <br />
+                        <input type="text" placeholder="Jane Appleseed" id="card--name" />
+                      </label> <br>
+                      <div id="invalid--card--name" class="validate"></div>
+                </div>
+              
+    
+              <div>
+                <label for="card--number">
+                    CARD NUMBER <br />
+                    <input
+                      type="text"
+                      placeholder="9056 6758 5647 107E"
+                      id="card--number"
+                    />
+                  </label> <br>
+                  <div id="invalid--card--number" class="validate"></div>
+              </div>
+              
+    
+              EXP. DATE (MM/YY) <span class="cvc">CVC</span> <br />
+              <div id="card--expiry">
+                <div id="year--month--section">
+                  <div>
+                    <label for="month--expiry">
+                        <input type="number" placeholder="MM" id="month--expiry" />
+                        <br />
+                      </label>
+                      <div id="invalid--month--expiry" class="validate"></div>
+                  </div>
+    
+    
+                  <div>
+                    <label for="year--expiry">
+                        <input type="number" placeholder="YY" id="year--expiry" />
+                      </label> <br>
+                      <div id="invalid--year--expiry" class="validate"></div>
+                  </div>
+                  
+    
+                  <div>
+                    <label for="card--cvc">
+                        <input
+                          type="number"
+                          placeholder="e.g 123"
+                          id="card--cvc"
+                          maxlength="3"
+                        />
+                      </label> <br>
+                      <div id="invalid--card--cvc" class="validate"></div>
+                  </div>
+                  
+                </div>
+    
+                <div id="invalid--card" class="validate"></div>
+              </div>
+    
+              <button type="submit" id="submit">Confirm</button>
+            </div>
+            
+        </form>
+
+        <div id="success--section">
+          <img src="./images/icon-complete.svg" alt="successful" />
+          <p>THANK YOU</p>
+          <p>Weve added your card details</p>
+          <button id="success--btn">Continue</button>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="github.com/koredebanfe">Korex</a>.
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

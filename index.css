@@ -1,0 +1,179 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.invalid {
+    color: red;
+    border: 1px solid red;
+    font-size: 10px;
+}
+
+input {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 10px 0;
+    width: 240px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+}
+
+.validate {
+    display: none;
+    margin-bottom: 10px;
+}
+
+
+
+.gradient--container{
+    background-image: url(./images/bg-main-mobile.png);
+    padding: 30px 40px 0;
+    background-size: contain;
+    color: aliceblue;
+    background-repeat: no-repeat;
+    display: flex;
+    font-size: 1.3em;
+    flex-direction: column-reverse;
+}
+
+
+.gradient--container--front{
+    background-image: url(./images/bg-card-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 28px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 50px;
+    z-index: 100;
+}
+
+.gradient--container--back{
+    background-image: url(./images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 45px 12px;
+    position: relative;
+    left: 30px;
+    text-align: center;
+}
+
+
+
+label {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+#form {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 10px 0;
+    width: 240px;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 4px;
+    cursor: pointer;
+    color:  hsl(0, 0%, 100%);
+}
+
+#year--month--section {
+    display: flex;
+}
+
+#year--month--section input {
+    display: inline-block;
+    margin-right: 10px;
+    width: 60px;
+}
+
+#card--details {
+    display: flex;
+    margin-top: 40px;
+}
+
+#card--expiry--details {
+    margin-left: 20px;
+}
+
+#card--cvc {
+    min-width: 100px;
+}
+
+.cvc {
+    margin-left: 100px;
+}
+
+#success--section {
+     display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+#success--section {
+    display: none;
+}
+
+#success--section p:first-child{
+    font-weight: 900;
+}
+
+@media screen and (min-width:768px){
+   .container {
+    display: flex;
+   } 
+
+   .gradient--container {
+    background-image: url(./images/bg-main-desktop.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-left: 80px;
+   }
+    
+   .gradient--container--back{
+    bottom: 50px;
+    padding: 50px 12px;
+   }
+
+   #card--details {
+    padding-bottom: 20px;
+   }
+
+   #success--section {
+    margin-right: 300px;
+   }
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
